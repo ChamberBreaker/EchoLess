@@ -1,14 +1,9 @@
 import React, { PropTypes as T } from 'react'
 import {ButtonToolbar, Button} from 'react-bootstrap'
-import AuthService from './../../Utils/AuthService'
+import AuthService from '../../utils/AuthService'
 import { Link } from 'react-router'
 
 export class Profile extends React.Component {
-  static propTypes = {
-    location: T.object,
-    auth: T.instanceOf(AuthService)
-  }
-
   render() {
     const { auth } = this.props
     return (
@@ -20,6 +15,11 @@ export class Profile extends React.Component {
       </div>
     )
   }
+}
+
+Profile.propTypes = {
+  location: T.object,
+  auth: T.instanceOf(AuthService)
 }
 
 export default Profile;

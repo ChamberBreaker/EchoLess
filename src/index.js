@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import App from './Components/App';
-import Home from './Routes/Home/';
-import About from './Components/About';
-import SignIn from './Routes/SignIn/';
-import Profile from './Routes/Profile/';
-import NotFound from './Components/NotFound';
-import AuthService from './Utils/AuthService';
-import './index.css';
+import PageLayout from './components/PageLayout/';
+import Home from './components/Home/';
+import About from './components/About';
+import SignIn from './components/SignIn/';
+import Profile from './components/Profile/';
+import NotFound from './components/NotFound';
+import AuthService from './utils/AuthService';
+import './../public/index.css';
 
 const auth = new AuthService('riDwAzBSuxGh2T77HYJdJkwgA2WFVO8E', 'echoless.auth0.com');
 
@@ -21,7 +21,7 @@ const requireAuth = (nextState, replace) => {
 
 ReactDOM.render((
   <Router history={browserHistory}>
-    <Route path="/" component={App} auth={auth}>
+    <Route path="/" component={PageLayout} auth={auth}>
       <IndexRoute component={Home}/>
       <Route path="about" component={About}/>
       <Route path="signin" component={SignIn}/>

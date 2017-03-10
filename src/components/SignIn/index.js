@@ -1,13 +1,8 @@
 import React, { PropTypes as T } from 'react'
 import {ButtonToolbar, Button} from 'react-bootstrap'
-import AuthService from './../../Utils/AuthService'
+import AuthService from '../../utils/AuthService'
 
 export class SignIn extends React.Component {
-  static propTypes = {
-    location: T.object,
-    auth: T.instanceOf(AuthService)
-  }
-
   render() {
     const { auth } = this.props
     return (
@@ -19,6 +14,11 @@ export class SignIn extends React.Component {
       </div>
     )
   }
+}
+
+SignIn.propTypes = {
+  location: T.object,
+  auth: T.instanceOf(AuthService)
 }
 
 export default SignIn;

@@ -1,5 +1,5 @@
 import React from 'react'
-import Comments from './Components/Comments'
+import Comments from './components/Comments'
 
 // Temp data. Replace w/ api calls.
 var newsTopics = ['TrendingTopic1', 'TrendingTopic2', 'TrendingTopic3', 'TrendingTopic4', 'TrendingTopic5']

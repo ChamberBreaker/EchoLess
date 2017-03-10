@@ -1,8 +1,8 @@
 import React from 'react'
-import Nav from './App/Nav'
-import Hero from './App/Hero'
-import Footer from './App/Footer'
-import './App/App.css';
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import Footer from './components/Footer'
+import './components/PageLayout.css';
 
 export default class App extends React.Component {
   render() {
